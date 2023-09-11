@@ -14,8 +14,8 @@ def get_endpoint():
     current_day = datetime.datetime.utcnow().strftime('%A')
 
     # Get the GitHub URLs
-    github_file_url = request.args.get('https://github.com/timmytrace/API-Endpoint')
-    github_repo_url = request.args.get('https://github.com/timmytrace/API-Endpoint/blob/main/app.py')
+    github_file_url = request.args.get('https://github.com/timmytrace/backend-api_projects-HNG')
+    github_repo_url = request.args.get('https://github.com/timmytrace/backend-api_projects-HNG/blob/main/app.py')
 
     # Create the JSON response
     response = {
