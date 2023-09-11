@@ -6,16 +6,16 @@ app = Flask(__name__)
 @app.route('/endpoint', methods=['GET'])
 def get_endpoint():
     # Get the query parameters
-    slack_name = request.args.get('Trace')
-    track = request.args.get('backend')
+    slack_name = request.args.get('slack_name')  # Use 'slack_name' as the parameter name
+    track = request.args.get('track')  # Use 'track' as the parameter name
 
     # Get the current UTC time and day of the week
     current_utc_time = datetime.datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
     current_day = datetime.datetime.utcnow().strftime('%A')
 
     # Get the GitHub URLs
-    github_file_url = request.args.get('https://github.com/timmytrace/backend-api_projects-HNG')
-    github_repo_url = request.args.get('https://github.com/timmytrace/backend-api_projects-HNG/blob/main/app.py')
+    github_file_url = "https://github.com/timmytrace/backend-api_projects-HNG/tree/main"  # Correct the URL
+    github_repo_url = "https://github.com/timmytrace/backend-api_projects-HNG/blob/main/app.py"  # Correct the URL
 
     # Create the JSON response
     response = {
